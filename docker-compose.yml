@@ -1,6 +1,6 @@
 version: '2'
 services:
-  academy-api:
+  gateway-api:
     build: .
     environment:
       PORT: '5000'
