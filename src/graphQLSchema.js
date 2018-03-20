@@ -10,19 +10,29 @@ import {
 	campaignsTypeDef
 } from './campaigns/typeDefs';
 
+import {
+	favoritesMutations,
+	favoritesQueries,
+	favoritesTypeDef
+} from './favorites/typeDefs';
+
 import campaignsResolvers from './campaigns/resolvers';
+import favoritesResolvers from './favorites/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
 		campaignsTypeDef
+		favoritesTypeDef
 	],
 	[
 		campaignsQueries
+		favoritesQueries
 	],
 	[
 		campaignsMutations
+		favoritesMutations
 	]
 );
 
