@@ -23,15 +23,15 @@ import favoritesResolvers from './favorites/resolvers';
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		campaignsTypeDef
+		campaignsTypeDef,
 		favoritesTypeDef
 	],
 	[
-		campaignsQueries
+		campaignsQueries,
 		favoritesQueries
 	],
 	[
-		campaignsMutations
+		campaignsMutations,
 		favoritesMutations
 	]
 );

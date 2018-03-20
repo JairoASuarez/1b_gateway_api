@@ -14,12 +14,12 @@ input FavoriteInput {
 }
 `;
 
-export const favoritessQueries = `
+export const favoritesQueries = `
     allFavorites: [Favorite]!
     FavoriteById(id: Int!): Favorite!
 `;
 
-export const favoritessMutations = `
+export const favoritesMutations = `
     createFavorite(favorite: FavoriteInput!): Favorite!
     deleteFavorite(id: Int!): Favorite!
     updateFavorite(id: Int!, favorite: FavoriteInput!): Favorite!
