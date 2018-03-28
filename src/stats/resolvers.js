@@ -11,11 +11,11 @@ const resolvers = {
 			generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createPoint: (_, { point }) =>
-			generalRequest(`${URL}`, 'POST', point),
-		updatePoint: (_, { id, point }) =>
-			generalRequest(`${URL}/${id}`, 'PUT', point),
-		deletePoint: (_, { id }) =>
+		createDisposalPoint: (_, { disposalPoint }) =>
+			generalRequest(`${URL}`, 'POST', disposalPoint),
+		updateDisposalPoint: (_, { id, disposalPoint }) =>
+			generalRequest(`${URL}/${id}`, 'PUT', disposalPoint),
+		deleteDisposalPoint: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };
