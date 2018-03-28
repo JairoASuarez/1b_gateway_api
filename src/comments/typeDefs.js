@@ -2,15 +2,15 @@ export const commentsTypeDef = `
 type Comment {
     _id: String!
     content: String!
-    score: Double!
-    point_id: Integer!
+    score: Float!
+    point_id: Int!
 }
 
 input CommentInput{
     _id: String!
     content: String!
-    score: Double!
-    point_id: Integer!
+    score: Float!
+    point_id: Int!
 }
 `;
 

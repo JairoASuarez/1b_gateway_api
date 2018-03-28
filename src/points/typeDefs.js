@@ -1,25 +1,35 @@
 export const pointsTypeDef = `
 type Point {
-    id: Integer!
+    id: Int!
+    name: String!
+    address: String!
+    category: String!
+    contact: String!
+    email: String!
     latitude: Float!
     longitude: Float!
-    name: String!
-    category: String!
-    subcategory: String!
+    business_hours: String!
 }
 
 input PointInput {
-    id: Integer!
+    name: String!
+    address: String!
+    category: String!
+    contact: String!
+    email: String!
     latitude: Float!
     longitude: Float!
-    name: String!
-    category: String!
-    subcategory: String!
+    business_hours: String!
 }
 `;
 
 export const pointsQueries = `
-    createPoint(point: PointInput!): Point!
-    deletePoint(id: Integer!): Point!
-    updatePoint(id: Integer!, point: PointInput!): Point!
+    allPoints: [Point]!
+    pointById(id: Int!): Point!
+`;
+
+export const pointsMutations = `
+    createPoint(point: PointInput!): Point
+    deletePoint(id: Int!): Point!
+    updatePoint(id: Int!, point: PointInput!): Point!
 `;
