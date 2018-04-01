@@ -39,7 +39,7 @@ export const disposalPointQueries = `
 `;
 
 export const disposalPointMutations = `
-    createDisposalPoint(disposalPoint: DisposalPointInput!): DisposalPoint!
-    deleteDisposalPoint(id: Int!): DisposalPoint!
-    updateDisposalPoint(id: Int!, disposalPoint: DisposalPointInput!): DisposalPoint!
+    createPoint(disposalPoint: DisposalPointInput!): DisposalPoint!
+    deletePoint(id: Int!): DisposalPoint!
+    updatePoint(id: Int!, disposalPoint: DisposalPointInput!): DisposalPoint!
 `;
