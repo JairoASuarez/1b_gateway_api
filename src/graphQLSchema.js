@@ -38,7 +38,7 @@ import campaignsResolvers from './campaigns/resolvers';
 import favoritesResolvers from './favorites/resolvers';
 import commentsResolvers from './comments/resolvers';
 import pointsResolvers from './points/resolvers';
-import pointsResolvers from './users/resolvers';
+import usersResolvers from './users/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -54,15 +54,15 @@ const mergedTypeDefs = mergeSchemas(
 		campaignsQueries,
 		favoritesQueries,
 		commentsQueries,
-		pointsQueries
+		pointsQueries,
 		usersQueries
 	],
 	[
 		campaignsMutations,
 		favoritesMutations,
 		commentsMutations,
-		pointsQueries
-		usersQueries
+		pointsMutations,
+		usersMutations
 	]
 );
 
