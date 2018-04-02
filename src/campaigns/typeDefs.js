@@ -5,7 +5,7 @@ type Campaign {
     city: String!
     address: String!
     ubication: [Int]!
-    created_date: String!
+    created_date: String
     start_date: String!
     end_date: String!
     status: String!
@@ -17,7 +17,7 @@ input CampaignInput {
   city: String!
   address: String!
   ubication: [Int]!
-  created_date: String!
+  created_date: String
   start_date: String!
   end_date: String!
   status: String!
