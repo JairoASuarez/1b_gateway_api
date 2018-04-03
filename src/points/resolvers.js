@@ -3,6 +3,8 @@ import { url, port, entryPoint } from './server';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
 
+console.log("URL for Points: " + URL);
+
 const resolvers = {
   Query: {
     allPoints: (_) =>
