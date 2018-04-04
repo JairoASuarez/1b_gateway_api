@@ -58,15 +58,15 @@ const mergedTypeDefs = mergeSchemas(
 		commentsTypeDef,
 		pointsTypeDef,
 		usersTypeDef,
-        disposalPointTypeDef
+    disposalPointTypeDef
 	],
 	[
 		campaignsQueries,
 		favoritesQueries,
 		commentsQueries,
 		pointsQueries,
-		usersQueries
-        disposalPointQueries
+		usersQueries,
+    disposalPointQueries
 	],
 	[
 		campaignsMutations,
@@ -74,7 +74,7 @@ const mergedTypeDefs = mergeSchemas(
 		commentsMutations,
 		pointsMutations,
 		usersMutations,
-        disposalPointMutations
+    disposalPointMutations
 	]
 );
 
@@ -87,6 +87,6 @@ export default makeExecutableSchema({
 		commentsResolvers,
 		campaignsResolvers,
 		favoritesResolvers,
-        disposalPointResolvers
+    disposalPointResolvers
 	)
 });
