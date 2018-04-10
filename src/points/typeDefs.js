@@ -29,7 +29,7 @@ export const pointsQueries = `
 `;
 
 export const pointsMutations = `
-    createPoint(point: PointInput!): Point
+    createPoint(point: PointInput!): Point!
     deletePoint(id: Int!): Point!
     updatePoint(id: Int!, point: PointInput!): Point!
 `;
