@@ -7,7 +7,6 @@ type Favorite {
 }
 
 input FavoriteInput {
-  id: Int!
   user_id: Int!
   place_id: Int!
   comment: String!

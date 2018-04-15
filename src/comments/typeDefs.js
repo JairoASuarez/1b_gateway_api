@@ -7,7 +7,6 @@ type Comment {
 }
 
 input CommentInput{
-    _id: String!
     content: String!
     score: Float!
     point_id: Int!
