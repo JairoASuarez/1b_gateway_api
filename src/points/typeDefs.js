@@ -26,6 +26,8 @@ input PointInput {
 export const pointsQueries = `
     allPoints: [Point]!
     pointById(id: Int!): Point!
+    pointByName(name: String!): [Point]!
+    pointByPosition(latitude_upper: Float, latitude_lower: Float, longitude_upper: Float, longitude_lower: Float): [Point]!
 `;
 
 export const pointsMutations = `

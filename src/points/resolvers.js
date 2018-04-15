@@ -11,6 +11,10 @@ const resolvers = {
         getRequest(URL, ''),
     pointById: (_, { id }) =>
         generalRequest(`${URL}/${id}`, 'GET'),
+    pointByName: (_, { name } ) =>
+        generalRequest(`${URL}?q[name_cont]=${name}`, 'GET'),
+    pointByPosition: (_, { latitude_upper, latitude_lower, longitude_upper, longitude_lower } ) =>
+        generalRequest(`${URL}?q[latitude_lteq]=${latitude_upper}&q[latitude_gteq]=${latitude_lower}&q[longitude_lteq]=${longitude_upper}&q[longitude_gteq]=${longitude_lower}`, 'GET'),
   },
   Mutation: {
     createPoint: (_, { point }) =>
