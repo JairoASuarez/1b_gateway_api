@@ -6,10 +6,13 @@ type User {
   password: String!
 }
 
-type Auth {
+type Token {
+  jwt: String!
+}
+
+input AuthInput {
   email: String!
   password: String!
-  token: String!
 }
 
 input UserInput {
@@ -19,8 +22,7 @@ input UserInput {
 }
 
 input SessionInput {
-  email: String!
-  password: String!
+  auth: AuthInput!
 }
 
 `;
@@ -33,5 +35,5 @@ export const usersMutations = `
     createUser(user: UserInput!): User!
     deleteUser(id: Int!): User!
     updateUser(id: Int!, user: UserInput!): User!
-    createSession(auth: SessionInput!): Auth!
+    createSession(auth: SessionInput!): Token!
 `;
