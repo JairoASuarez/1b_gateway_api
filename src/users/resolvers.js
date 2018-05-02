@@ -7,10 +7,8 @@ console.log("URL for Users: " + URL);
 
 const resolvers = {
 	Query: {
-		allUsers: (_) =>
+		getCurrentUser: (_) =>
 			getRequest(URL, ''),
-		  userById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
 		createUser: (_, { user }) =>
@@ -18,8 +16,10 @@ const resolvers = {
 		updateUser: (_, { id, user }) =>
 			generalRequest(`${URL}/${id}`, 'PUT', user),
 		deleteUser: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'DELETE')
-	}
+			generalRequest(`${URL}/${id}`, 'DELETE'),
+		createSession: (_, { auth }) =>
+			generalRequest(`${URL}/auth`, 'POST', auth),
+		}
 };
 
 export default resolvers;

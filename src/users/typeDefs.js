@@ -1,29 +1,37 @@
 export const usersTypeDef = `
 type User {
   id: Int!
-  name: String!
-  lastname: String!
+  username: String!
   email: String!
   password: String!
+}
 
+type Auth {
+  email: String!
+  password: String!
+  token: String!
 }
 
 input UserInput {
-  id: Int!
-  name: String!
-  lastname: String!
+  username: String!
   email: String!
   password: String!
 }
+
+input SessionInput {
+  email: String!
+  password: String!
+}
+
 `;
 
 export const usersQueries = `
-    allUsers: [User]!
-    UserById(id: Int!): User!
+    getCurrentUser: [User]!
 `;
 
 export const usersMutations = `
     createUser(user: UserInput!): User!
     deleteUser(id: Int!): User!
     updateUser(id: Int!, user: UserInput!): User!
+    createSession(auth: SessionInput!): Auth!
 `;
