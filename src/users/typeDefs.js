@@ -10,7 +10,7 @@ type Token {
   jwt: String!
 }
 
-input AuthInput {
+input AuthenticationInput {
   email: String!
   password: String!
 }
@@ -22,7 +22,7 @@ input UserInput {
 }
 
 input SessionInput {
-  auth: AuthInput!
+  auth: AuthenticationInput!
 }
 
 `;
