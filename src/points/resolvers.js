@@ -13,6 +13,8 @@ const resolvers = {
         generalRequest(`${URL}/${id}`, 'GET'),
     pointByName: (_, { name } ) =>
         generalRequest(`${URL}?q[name_cont]=${name}`, 'GET'),
+    pointByCategory: (_, { category, lat_u, lat_l, lng_u, lng_l } ) =>
+        generalRequest(`${URL}?q[category_cont]=${category}&q[latitude_lteq]=${lat_u}&q[latitude_gteq]=${lat_l}&q[longitude_lteq]=${lng_u}&q[longitude_gteq]=${lng_l}`, 'GET'),
     pointByPosition: (_, { latitude_upper, latitude_lower, longitude_upper, longitude_lower } ) =>
         generalRequest(`${URL}?q[latitude_lteq]=${latitude_upper}&q[latitude_gteq]=${latitude_lower}&q[longitude_lteq]=${longitude_upper}&q[longitude_gteq]=${longitude_lower}`, 'GET'),
   },

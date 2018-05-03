@@ -15,7 +15,7 @@ input FavoriteInput {
 
 export const favoritesQueries = `
     allFavorites: [Favorite]!
-    FavoriteById(id: Int!): Favorite!
+    FavoriteById(id: Int!): [Favorite]!
 `;
 
 export const favoritesMutations = `

@@ -10,11 +10,11 @@ const resolvers = {
 		allFavorites	: (_) =>
 			getRequest(URL, ''),
 		FavoriteById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
+			generalRequest(`${URL}/${id}/`, 'GET'),
 	},
 	Mutation: {
 		createFavorite: (_, { favorite }) =>
-			generalRequest(`${URL}`, 'POST', favorite),
+			generalRequest(`${URL}/`, 'POST', favorite),
 		updateFavorite: (_, { id, favorite }) =>
 			generalRequest(`${URL}/${id}`, 'PUT', favorite),
 		deleteFavorite: (_, { id }) =>
