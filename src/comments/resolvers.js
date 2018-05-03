@@ -11,6 +11,8 @@ const resolvers = {
             getRequest(URL, ''),
         commentById: (_, { id }) =>
             generalRequest(`${URL}/${id}`, 'GET'),
+	commentByPoint: (_, { id }) =>
+	    generalRequest(`${URL}?q[point_id_eq]=${id}`, 'GET')
     },
     Mutation: {
         createComment: (_, { comment }) =>

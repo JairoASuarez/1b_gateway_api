@@ -16,6 +16,7 @@ input CommentInput{
 export const commentsQueries = `
     allComments: [Comment]!
     commentById(id: String!): Comment!
+    commentByPoint(id: Int!): [Comment]!
 `;
 
 export const commentsMutations = `

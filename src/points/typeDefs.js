@@ -27,6 +27,7 @@ export const pointsQueries = `
     allPoints: [Point]!
     pointById(id: Int!): Point!
     pointByName(name: String!): [Point]!
+    pointByCategory(category: String!, lat_u: Float!, lat_l: Float!, lng_u: Float!, lng_l: Float!): [Point]!
     pointByPosition(latitude_upper: Float, latitude_lower: Float, longitude_upper: Float, longitude_lower: Float): [Point]!
 `;
 
