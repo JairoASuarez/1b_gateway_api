@@ -23,5 +23,8 @@ services:
       STATS_URL: '35.196.104.239'
       STATS_PORT: '3305'
       STATS_ENTRY: 'disposal_points'
+      AUTH_URL: '35.196.104.239'
+      AUTH_PORT: '3306'
+      AUTH_ENTRY: 'ldap'
     ports:
       - '3307:3307'
