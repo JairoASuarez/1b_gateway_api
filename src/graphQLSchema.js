@@ -41,6 +41,10 @@ import {
     disposalPointMutations
 } from './stats/typeDefs';
 
+import {
+		authMutations,
+		authTypeDef
+} from './auth/typeDefs';
 
 import campaignsResolvers from './campaigns/resolvers';
 import favoritesResolvers from './favorites/resolvers';
@@ -48,6 +52,7 @@ import commentsResolvers from './comments/resolvers';
 import pointsResolvers from './points/resolvers';
 import usersResolvers from './users/resolvers';
 import disposalPointResolvers from './stats/resolvers';
+import authResolvers from './auth/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -58,7 +63,8 @@ const mergedTypeDefs = mergeSchemas(
 		commentsTypeDef,
 		pointsTypeDef,
 		usersTypeDef,
-    disposalPointTypeDef
+    disposalPointTypeDef,
+		authTypeDef
 	],
 	[
 		campaignsQueries,
@@ -74,7 +80,8 @@ const mergedTypeDefs = mergeSchemas(
 		commentsMutations,
 		pointsMutations,
 		usersMutations,
-    disposalPointMutations
+    disposalPointMutations,
+		authMutations
 	]
 );
 
@@ -88,6 +95,7 @@ export default makeExecutableSchema({
 		commentsResolvers,
 		campaignsResolvers,
 		favoritesResolvers,
-    disposalPointResolvers
+    disposalPointResolvers,
+		authResolvers
 	)
 });
