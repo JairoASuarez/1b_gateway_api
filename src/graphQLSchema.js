@@ -83,6 +83,7 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
+		usersResolvers,
 		pointsResolvers,
 		commentsResolvers,
 		campaignsResolvers,

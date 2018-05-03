@@ -22,9 +22,8 @@ export async function generalRequest(url, method, body, fullResponse) {
 		// eslint-disable-next-line
 		console.log(url);
 	}
- 	console.log(parameters);	
+ 	console.log(parameters);
 	try {
-		console.log(parameters);
 		return await request(parameters);
 	} catch (err) {
 		return err;
