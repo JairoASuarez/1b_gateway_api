@@ -12,3 +12,5 @@ COPY . /git/gateway-api/
 RUN npm run prepublish
 
 CMD [ "npm", "run", "runServer" ]
+
+EXPOSE 3307
