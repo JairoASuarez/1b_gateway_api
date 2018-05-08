@@ -1,4 +1,4 @@
-import { generalRequest, getRequest } from '../utilities';
+import { generalRequest, getRequest, authRequest } from '../utilities';
 import { url, port, entryPoint } from './server';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
@@ -7,8 +7,8 @@ console.log("URL for Users: " + URL);
 
 const resolvers = {
 	Query: {
-		getCurrentUser: (_) =>
-			getRequest(URL, ''),
+		checkSession: (_, { token }) =>
+        authRequest(`${URL}`, 'GET', token),
 	},
 	Mutation: {
 		createUser: (_, { user }) =>

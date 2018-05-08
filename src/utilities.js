@@ -90,3 +90,25 @@ export function formatErr(error) {
 	}
 	return data;
 }
+
+export async function authRequest(url, method, token, body, fullResponse) {
+	const headers = {Authorization: 'Bearer ' + token.token};
+	const parameters = {
+		method,
+		headers,
+		uri: encodeURI(url),
+		body,
+		json: true,
+		resolveWithFullResponse: fullResponse
+	};
+	if (process.env.SHOW_URLS) {
+		// eslint-disable-next-line
+		console.log(url);
+	}
+ 	console.log(parameters);
+	try {
+		return await request(parameters);
+	} catch (err) {
+		return err;
+	}
+}

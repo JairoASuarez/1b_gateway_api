@@ -10,6 +10,11 @@ type Token {
   jwt: String!
 }
 
+type Session {
+  id: Int!
+  username: String!
+}
+
 input AuthenticationInput {
   email: String!
   password: String!
@@ -25,10 +30,14 @@ input SessionInput {
   auth: AuthenticationInput!
 }
 
+input TokenInput {
+  token: String!
+}
+
 `;
 
 export const usersQueries = `
-    getCurrentUser: [User]!
+    checkSession(token: TokenInput!): Session!
 `;
 
 export const usersMutations = `
