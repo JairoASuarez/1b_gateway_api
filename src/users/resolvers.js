@@ -13,8 +13,8 @@ const resolvers = {
 	Mutation: {
 		createUser: (_, { user }) =>
 			generalRequest(`${URL}`, 'POST', user),
-		updateUser: (_, { id, user }) =>
-			generalRequest(`${URL}/${id}`, 'PUT', user),
+		updateUser: (_, { id, user, token }) =>
+			authRequest(`${URL}/${id}`, 'PATCH', token, user),
 		deleteUser: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE'),
 		createSession: (_, { auth }) =>

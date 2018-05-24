@@ -26,6 +26,12 @@ input UserInput {
   password: String!
 }
 
+input UpdateUser {
+  username: String
+  email: String
+  password: String
+}
+
 input SessionInput {
   auth: AuthenticationInput!
 }
@@ -43,6 +49,6 @@ export const usersQueries = `
 export const usersMutations = `
     createUser(user: UserInput!): User!
     deleteUser(id: Int!): User!
-    updateUser(id: Int!, user: UserInput!): User!
+    updateUser(id: Int!, user: UpdateUser!, token: TokenInput!): User!
     createSession(auth: SessionInput!): Token!
 `;

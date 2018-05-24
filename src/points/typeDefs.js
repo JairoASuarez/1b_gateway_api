@@ -9,6 +9,8 @@ type Point {
     latitude: Float!
     longitude: Float!
     business_hours: String!
+    city: String
+    departament: String
 }
 
 input PointInput {
@@ -20,6 +22,8 @@ input PointInput {
     latitude: Float!
     longitude: Float!
     business_hours: String!
+    city: String
+    departament: String
 }
 `;
 
